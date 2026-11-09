@@ -8,8 +8,8 @@
     <artifactId>featbit-openfeature-provider-java-server</artifactId>
     <version>1.0.0</version>
 
-    <name>featbit/featbit-java-server-openfeature-provider</name>
-    <url>https://github.com/featbit/featbit-java-server-openfeature-provider</url>
+    <name>featbit/openfeature-provider-java-server</name>
+    <url>https://github.com/featbit/openfeature-provider-java-server</url>
 
     <description>
         This is the Java Server Side SDK for the feature management platform FeatBit.
@@ -33,8 +33,8 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:featbit/featbit-java-server-openfeature-provider.git</connection>
-        <url>https://github.com/featbit/featbit-java-server-openfeature-provider</url>
+        <connection>scm:git:git@github.com:featbit/openfeature-provider-java-server.git</connection>
+        <url>https://github.com/featbit/openfeature-provider-java-server</url>
     </scm>
 
     <properties>
