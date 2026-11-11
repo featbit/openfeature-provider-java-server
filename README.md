@@ -19,7 +19,7 @@ You can add it to your project using the following dependency.
     <dependency>
         <groupId>co.featbit</groupId>
         <artifactId>featbit-openfeature-provider-java-server</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 ```
