@@ -76,13 +76,17 @@ abstract class Converter {
         }
 
         private <T> ProviderEvaluation<T> buildProviderEvaluation(T value, String reason, boolean isDefault) {
-            ProviderEvaluation.ProviderEvaluationBuilder<T> builder = ProviderEvaluation.<T>builder()
-                    .value(value)
-                    .reason(reason);
             if (isDefault && isErrorCode(reason)) {
-                builder.errorCode(getErrorCode(reason));
+                return ProviderEvaluation.<T>builder()
+                        .value(value)
+                        .reason(reason)
+                        .errorCode(getErrorCode(reason))
+                        .build();
             }
-            return builder.build();
+            return ProviderEvaluation.<T>builder()
+                    .value(value)
+                    .reason(reason)
+                    .build();
         }
 
         private boolean isErrorCode(String reason) {

@@ -84,6 +84,22 @@ class FBProviderTest extends BaseTest {
     }
 
     @Test
+    void testMissingFlagReturnsDefaultAndError() {
+        Client client = OpenFeatureAPI.getInstance().getClient();
+        FlagEvaluationDetails<String> details = client.getStringDetails("missing-flag", "fallback", user1);
+        assertEquals("fallback", details.getValue());
+        assertEquals(ErrorCode.FLAG_NOT_FOUND, details.getErrorCode());
+    }
+
+    @Test
+    void testWrongTypeReturnsDefaultAndError() {
+        Client client = OpenFeatureAPI.getInstance().getClient();
+        FlagEvaluationDetails<Boolean> details = client.getBooleanDetails("ff-test-string", false, user1);
+        assertFalse(details.getValue());
+        assertEquals(ErrorCode.TYPE_MISMATCH, details.getErrorCode());
+    }
+
+    @Test
     void testSegment() {
         Client client = OpenFeatureAPI.getInstance().getClient();
 
