@@ -38,12 +38,12 @@
     </scm>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <openfeature-version>1.23.0</openfeature-version>
-        <featbit-java-sdk-version>1.5.0</featbit-java-sdk-version>
+        <openfeature-version>[1.16.0,2.0.0)</openfeature-version>
+        <featbit-java-sdk-version>[1.5.0,2.0.0)</featbit-java-sdk-version>
         <junit-version>5.8.2</junit-version>
         <slf4j-version>[1.7.0,)</slf4j-version>
     </properties>

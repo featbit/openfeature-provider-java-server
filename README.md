@@ -8,7 +8,12 @@ It is not intended for use in desktop and embedded systems applications.
 
 ## Getting started
 
-FeaBit provider works with Java 8 and above and is available on Maven Central.
+FeatBit provider requires Java 11 or above and is available on Maven Central.
+
+Supported dependency versions:
+
+- OpenFeature Java SDK: 1.16.0 or later, below 2.0.0.
+- FeatBit Java SDK: 1.5.0 or later, below 2.0.0.
 You can add it to your project using the following dependency.
 
 ### Installation
