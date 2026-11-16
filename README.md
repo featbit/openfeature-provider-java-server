@@ -32,16 +32,20 @@ You can add it to your project using the following dependency.
 ### Usage
 
 ```java
+import co.featbit.openfeature.FBProvider;
+import co.featbit.server.FBConfig;
+import dev.openfeature.sdk.OpenFeatureAPI;
+
 FBConfig config = new FBConfig.Builder()
         .streamingURL(STREAM_URL)
         .eventURL(EVENT_URL)
         .build();
 
 // Synchronous
-OpenFeatureAPI.getInstance().setProviderAndWait(new FeatBitProvider(ENV_SECRET, config);
+OpenFeatureAPI.getInstance().setProviderAndWait(new FBProvider(ENV_SECRET, config));
 
 // Asynchronous
-OpenFeatureAPI.getInstance().setProvider(new FeatBitProvider(ENV_SECRET, config);
+OpenFeatureAPI.getInstance().setProvider(new FBProvider(ENV_SECRET, config));
 
 // Refer to docs to get a client and perform evaluations.
 ```
@@ -108,4 +112,4 @@ Read documentation for in-depth instructions on configuring and using FeatBit. Y
 complete [reference guide](https://docs.featbit.co/)
 
 Read documentation for in-depth instructions on using OpenFeature. You can also head straight to
-the [Documentation](https://openfeature.dev/docs/reference/intro) 
+the [Documentation](https://openfeature.dev/docs/reference/intro)
